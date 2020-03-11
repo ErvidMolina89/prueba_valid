@@ -7,6 +7,7 @@ import com.example.pruebavalid.Base.Implementations.BaseActivity
 import com.example.pruebavalid.DataAccess.RetrofitYesid.Manejador.RetrofitManager
 import com.example.pruebavalid.DataAccess.RetrofitYesid.Manejador.RetrofitParcelable
 import com.example.pruebavalid.DataAccess.RetrofitYesid.Recursos.Servicios
+import com.example.pruebavalid.Models.ListTopArtists
 import com.example.pruebavalid.Models.ListTrack
 import com.example.pruebavalid.Models.TopArtists
 import com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Implementations.FragmentListSongs
@@ -24,7 +25,7 @@ class MainActivity : BaseActivity() {
         RetrofitManager()
             .conContexto(App.mContext!!)
             .conObjetoAEnviar(object : RetrofitParcelable {})
-            .conObjetoEsperado(TopArtists::class.java)
+            .conObjetoEsperado(ListTopArtists::class.java)
             .conEscuchadorListaObjetos {
                 Log.e("","");
             }

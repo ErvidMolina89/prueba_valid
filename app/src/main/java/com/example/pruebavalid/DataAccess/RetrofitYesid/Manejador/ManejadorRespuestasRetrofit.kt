@@ -47,7 +47,7 @@ class ManejadorRespuestasRetrofit  : Callback<Any> {
         if(genereUnicoObjeto(json)){
             return
         }
-        if(generoUnaListaObjetos(json)){
+         if(generoUnaListaObjetos(json)){
             return
         }
 
@@ -61,6 +61,7 @@ class ManejadorRespuestasRetrofit  : Callback<Any> {
             escuchadorRespuestaObjeto?.invoke(objeto as? RetrofitParcelable)
             true
         }catch (e : Exception){
+            Log.e("ErrorGenericoObjeto" , "", e)
             false
         }
     }
@@ -78,6 +79,7 @@ class ManejadorRespuestasRetrofit  : Callback<Any> {
             escuchadorListaObjetos?.invoke(listaCasteada as? MutableList<RetrofitParcelable>)
             true
         }catch (e  : Exception){
+            Log.e("ErrorGenericoListObjeto" , "", e)
             false
         }
     }
