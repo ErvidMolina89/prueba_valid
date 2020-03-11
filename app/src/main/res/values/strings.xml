@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PruebaValid</string>
+
+    <string name="networkError">Error de red</string>
+    <string name="fail_proxy_service">Error en el Servicio de Internet</string>
+    <string name="list_songs">Lista de canciones</string>
+</resources>
