@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens10dp"
+        android:layout_marginEnd="@dimen/dimens10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_name_fragment_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/init_section"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimens25sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_container_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_space_fileds"
+            android:background="@drawable/edt_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_fragment_login" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_edt"
+                android:padding="@dimen/paddingImgLogin20dp"
+                android:src="@android:drawable/sym_action_email" />
+
+            <EditText
+                android:id="@+id/et_email_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimens10dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/Email"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <!--                android:text="eralmoba@gmail.com"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_container_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_space_fileds"
+            android:background="@drawable/edt_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_container_email" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_edt"
+                android:padding="@dimen/paddingImgLogin20dp"
+                android:src="@android:drawable/ic_lock_idle_lock" />
+
+            <EditText
+                android:id="@+id/et_Pass_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimens10dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryDark"
+                android:digits="@string/CaracteresPass"
+                android:maxLength="10" />
+            <!--                android:text="12345678"-->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_start_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_space_fileds"
+            android:text="@string/log_in"
+            android:background="@drawable/btn_general"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_container_password"/>
+
+        <TextView
+            android:id="@+id/tv_register_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen_space_fileds"
+            android:text="@string/registrar_usuario"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_start_section" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

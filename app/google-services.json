@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "695797140310",
+    "firebase_url": "https://pruebavalid.firebaseio.com",
+    "project_id": "pruebavalid",
+    "storage_bucket": "pruebavalid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695797140310:android:d210fc73c1a64cd4b4e4f7",
+        "android_client_info": {
+          "package_name": "com.example.pruebavalid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695797140310-28ifbcdkhkv4iur059g0cln03q1jkkci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcZwvxniMCz87CAIaLOCGBCAhTC_omisw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695797140310-28ifbcdkhkv4iur059g0cln03q1jkkci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

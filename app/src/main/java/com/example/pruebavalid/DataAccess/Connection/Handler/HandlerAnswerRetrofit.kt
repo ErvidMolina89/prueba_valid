@@ -1,17 +1,13 @@
-package com.example.pruebavalid.DataAccess.Connection
+package com.example.pruebavalid.DataAccess.Connection.Handler
 
 import android.util.Log
-import co.com.mitiempo.retrofitgenerico.RetrofitManager.IRetrofitParcelable
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-/**
- * Created by exsis on 7/11/17.
- */
-class HandlerAnswerRetrofit : Callback<Any> {
+class HandlerAnswerRetrofit  : Callback<Any> {
 
     val T = "ErrorRespRetro"
     private var listenerOfFailure : ((Int,Int)->Unit)?= null

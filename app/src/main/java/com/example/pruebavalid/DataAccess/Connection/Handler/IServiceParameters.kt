@@ -1,6 +1,7 @@
-package com.example.pruebavalid.DataAccess.Connection
+package com.example.pruebavalid.DataAccess.Connection.Handler
 
 interface IServiceParameters {
+
     enum class Methods{
         GET,
         POST,
@@ -9,5 +10,5 @@ interface IServiceParameters {
     }
 
     fun getURL() : String
-    fun getMethod() : Methods
+    fun getMethods() : Methods
 }

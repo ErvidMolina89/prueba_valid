@@ -1,10 +1,11 @@
-package com.example.pruebavalid.DataAccess.Connection
+package com.example.pruebavalid.DataAccess.Connection.Handler
 
 import retrofit2.Call
 import retrofit2.http.*
 
 /**
- * Created by exsis on 7/11/17.
+ * url dinamica
+ * https://stackoverflow.com/questions/32559333/retrofit-2-dynamic-url
  */
 interface IGenericServices {
 
@@ -19,5 +20,4 @@ interface IGenericServices {
 
     @DELETE
     fun deleteGeneric(@Url url: String) : Call<Any>;
-
 }

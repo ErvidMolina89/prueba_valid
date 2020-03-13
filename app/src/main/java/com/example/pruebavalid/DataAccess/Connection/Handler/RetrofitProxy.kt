@@ -1,15 +1,13 @@
-package com.example.pruebavalid.DataAccess.Connection
+package com.example.pruebavalid.DataAccess.Connection.Handler
 
 import android.content.Context
-import co.com.mitiempo.retrofitgenerico.RetrofitManager.IRetrofitParcelable
 import com.example.pruebavalid.BuildConfig
 import com.google.gson.GsonBuilder
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ProxyRetrofit {
-
+class RetrofitProxy {
     private var context : Context?= null
     fun withContext(context : Context) :objectToSend{
         this.context = context
@@ -19,7 +17,7 @@ class ProxyRetrofit {
     private var listenerObjectToSend : IRetrofitParcelable?= null
     inner class objectToSend{
         fun withObjectToSend(listenerObjectToSend : IRetrofitParcelable) : expectedObjeto{
-            this@ProxyRetrofit.listenerObjectToSend = listenerObjectToSend
+            this@RetrofitProxy.listenerObjectToSend = listenerObjectToSend
             return expectedObjeto()
         }
     }
@@ -27,7 +25,7 @@ class ProxyRetrofit {
     private var ExpectedObjectClass : Class<*> ?= null
     inner class expectedObjeto{
         fun <T:IRetrofitParcelable> withExpectedObjeto(expectedObjeto : Class<T>) : answerObjeto{
-            this@ProxyRetrofit.ExpectedObjectClass = expectedObjeto
+            this@RetrofitProxy.ExpectedObjectClass = expectedObjeto
             return answerObjeto()
         }
     }
@@ -37,12 +35,12 @@ class ProxyRetrofit {
     inner class answerObjeto{
 
         fun withListenerObjetc(listenerAnswerObject : ((IRetrofitParcelable?)->Unit)?) : answerObjeto{
-            this@ProxyRetrofit.listenerAnswerObject = listenerAnswerObject
+            this@RetrofitProxy.listenerAnswerObject = listenerAnswerObject
             return this
         }
 
         fun withListenerListObjetcs(listenerListObjetc : ((MutableList<IRetrofitParcelable>?)->Unit)?) : answerObjeto{
-            this@ProxyRetrofit.listenerListObjetc = listenerListObjetc
+            this@RetrofitProxy.listenerListObjetc = listenerListObjetc
             return this
         }
 
@@ -55,7 +53,7 @@ class ProxyRetrofit {
     private var listenerOfFailure : ((Int,Int)->Unit)?= null
     inner class answerFailure{
         fun withAnswerOfFailure(listenerOfFailure : ((Int,Int)->Unit)) : service{
-            this@ProxyRetrofit.listenerOfFailure = listenerOfFailure
+            this@RetrofitProxy.listenerOfFailure = listenerOfFailure
             return service()
         }
     }
@@ -63,7 +61,7 @@ class ProxyRetrofit {
     private var serviceSelected : IServiceParameters ?= null
     inner class service{
         fun withService(service : IServiceParameters) : QueryManager{
-            this@ProxyRetrofit.serviceSelected = service
+            this@RetrofitProxy.serviceSelected = service
             return QueryManager()
         }
     }
@@ -116,7 +114,7 @@ class ProxyRetrofit {
         }
 
         private fun toSelectCall(genericService : IGenericServices) : Call<Any>{
-            return when(serviceSelected!!.getMethod()){
+            return when(serviceSelected!!.getMethods()){
                 IServiceParameters.Methods.GET -> genericService.getGeneric(serviceSelected!!.getURL())
                 IServiceParameters.Methods.POST -> genericService.getGeneric(serviceSelected!!.getURL())
                 IServiceParameters.Methods.PUT -> genericService.getGeneric(serviceSelected!!.getURL())
