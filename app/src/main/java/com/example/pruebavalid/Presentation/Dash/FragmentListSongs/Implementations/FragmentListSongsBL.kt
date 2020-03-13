@@ -13,15 +13,7 @@ class FragmentListSongsBL (var listener: IFragmentListSongsListener): IFragmentL
     /*
     Funciones que proviene de mi Iresponder
      */
-    override fun onSuccessResponse(objectResponse: Any?, serviceTag: Int) {
 
-
-    }
-
-    override fun onFailedResponse(response: MessageResponse, serviceTag: Int) {
-
-
-    }
 
 //    private fun listSongs(): ListTrack{
 //        val list = ListTrack()

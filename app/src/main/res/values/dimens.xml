@@ -9,4 +9,13 @@
     <dimen name="dimens_100dp">100dp</dimen>
     <dimen name="dimen_3pt">3pt</dimen>
     <dimen name="dimen_3dp">3dp</dimen>
+    <dimen name="heighsEdtBtn56dp">56dp</dimen>
+    <dimen name="paddingImgLogin20dp">20dp</dimen>
+    <dimen name="dimen_18sp">18sp</dimen>
+    <dimen name="dimen_space_fileds">15dp</dimen>
+    <dimen name="dimen_16sp">16sp</dimen>
+    <dimen name="height_et_56dp">56dp</dimen>
+    <dimen name="dimens20sp">20sp</dimen>
+    <dimen name="dimens15dp">15dp</dimen>
+    <dimen name="icono_50dp">50dp</dimen>
 </resources>

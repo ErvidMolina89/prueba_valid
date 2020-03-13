@@ -1,7 +1,5 @@
 package com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Interfaces
 
-import com.example.pruebavalid.Base.Interfaces.IBaseBL
-
-interface IFragmentListSongsBL: IBaseBL {
+interface IFragmentListSongsBL {
     fun getListSongsService()
 }

@@ -2,6 +2,7 @@ package com.example.pruebavalid.Util
 
 import android.content.Context
 import android.net.ConnectivityManager
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.internal.LinkedTreeMap
 import java.lang.Exception
 
@@ -50,6 +51,11 @@ fun LinkedTreeMap<Any,Any>.toJsonString(): String{
     }
     jsonString+="}"
     return jsonString
+}
+
+fun Context.showDialogueGenerico(){
+    if(this !is AppCompatActivity){ return }
+    DialogueGenerico.getInstance().showDialogue(supportFragmentManager,"DialogoGenerico")
 }
 
 fun isNetworkAvailable(context: Context): Boolean {
