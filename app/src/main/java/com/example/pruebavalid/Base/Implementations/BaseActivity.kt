@@ -11,7 +11,6 @@ import com.example.pruebavalid.Util.HiddenKeyBoard
 
 @SuppressLint("Registered")
 open class BaseActivity: AppCompatActivity()  {
-    private var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,23 +20,6 @@ open class BaseActivity: AppCompatActivity()  {
 
     fun navigationEntreFragment(rutaContenedor:Int, etiqueta:String? = null, fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(rutaContenedor, fragment).addToBackStack(etiqueta).commit()
-    }
-
-    fun showProgress(titleDialog: String?) {
-        if (progressDialog != null) {
-            closeProgress()
-        }
-        progressDialog = ProgressDialog(this, R.style.AppCompatAlertProgressStyle)
-        progressDialog!!.setMessage(titleDialog)
-        progressDialog!!.setCancelable(true)
-        progressDialog!!.show()
-    }
-
-    fun closeProgress() {
-        if (progressDialog != null && progressDialog!!.isShowing) {
-            progressDialog!!.dismiss()
-            progressDialog = null
-        }
     }
 
     override fun onPause() {

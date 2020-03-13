@@ -13,8 +13,6 @@ import com.example.pruebavalid.Models.ListTopArtists
 import com.example.pruebavalid.Models.ListTrack
 import com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Complements.RecyclerAdapterArtists
 import com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Complements.RecyclerAdapterSongs
-import com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Interfaces.IFragmentListSongsPresenter
-import com.example.pruebavalid.Presentation.Dash.FragmentListSongs.Interfaces.IFragmentListSongsView
 import com.example.pruebavalid.R
 import kotlinx.android.synthetic.main.fragment_list_songs.*
 
@@ -23,8 +21,6 @@ class FragmentListSongs : BaseFragment(){
     var listTracks: ListTrack? = null
     var listTopArtists: ListTopArtists? = null
     var typeService: Int? = null
-    private var presenter: IFragmentListSongsPresenter? = null
-    var onFragmentListView = onActionFragmentListView()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -65,17 +61,6 @@ class FragmentListSongs : BaseFragment(){
                 }
             }
         }
-    }
-
-    inner class onActionFragmentListView: IFragmentListSongsView {
-        override fun receiveListSongsService(listSongs: ListTrack) {
-            try {
-
-            }catch (e: Exception) {
-
-            }
-        }
-
     }
 
     inner class onActionRecyclerSongs: RecyclerAdapterSongs.SonsListener {

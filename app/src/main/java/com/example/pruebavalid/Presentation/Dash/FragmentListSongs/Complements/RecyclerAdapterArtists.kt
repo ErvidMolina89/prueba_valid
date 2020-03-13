@@ -51,7 +51,7 @@ class RecyclerAdapterArtists (
         val rank            = view.findViewById<TextView>(R.id.tv_rank)
 
         fun setDetalleSongs(artist: DetailsTopArtist){
-            if (artist.image?.get(2)?.text != null) convertImageService(artist.url)
+            if (artist.image?.get(2)?.text != null) convertImageService(artist.image!![2].text)
             if (artist.name != null) name.text = artist.name
             if (artist.listeners != null) listeners?.text = artist.listeners
             duration.visibility = View.GONE
